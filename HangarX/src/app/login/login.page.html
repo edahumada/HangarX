@@ -1,0 +1,34 @@
+<ion-content class="login-content">
+  <div class="login-container">
+    
+    <img src="assets/img/a320.png" alt="Logo de HangarX" class="logo-image" />
+
+    <ion-card class="login-card">
+      <ion-card-header class="ion-text-center">
+        <ion-card-title>Bienvenido a HangarX</ion-card-title>
+        <ion-card-subtitle>Inicia sesión para una mejor experiencia</ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content>
+        <ion-item>
+          <ion-label position="floating">Correo electrónico</ion-label>
+          <ion-input [(ngModel)]="email" type="email" clearInput></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Contraseña</ion-label>
+          <ion-input [(ngModel)]="password" type="password" clearInput></ion-input>
+        </ion-item>
+
+        <ion-button expand="block" (click)="login()" class="login-button">
+          Iniciar sesión
+        </ion-button>
+
+        <ion-button expand="block" fill="clear" (click)="goToRegister()" class="register-button" color="medium">
+          ¿No tienes cuenta? <strong>Regístrate</strong>
+        </ion-button>
+      </ion-card-content>
+    </ion-card>
+    
+  </div>
+</ion-content>

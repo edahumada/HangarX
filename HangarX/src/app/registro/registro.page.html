@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Registro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="false" class="ion-padding">
+  <ion-card>
+    <ion-card-content>
+
+      <ion-item>
+        <ion-label position="floating">Nombre</ion-label>
+        <ion-input type="text" [(ngModel)]="nombre"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Apellido</ion-label>
+        <ion-input type="text" [(ngModel)]="apellido"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Email</ion-label>
+        <ion-input type="email" [(ngModel)]="email"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Contraseña</ion-label>
+        <ion-input type="password" [(ngModel)]="password"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Género</ion-label>
+        <ion-select [(ngModel)]="selectedOption" interface="popover">
+          <ion-select-option value="hombre">Hombre</ion-select-option>
+          <ion-select-option value="mujer">Mujer</ion-select-option>
+          <ion-select-option value="otro">Sin Definir</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <div style="margin-top: 1rem;">
+        <mat-form-field appearance="fill" class="full-width">
+          <mat-label>Fecha de nacimiento</mat-label>
+          <input matInput [matDatepicker]="picker" [(ngModel)]="selectedDate">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+      </div>
+
+      <ion-button expand="block" (click)="guardar()">Guardar Datos</ion-button>
+
+    </ion-card-content>
+  </ion-card>
+</ion-content>

@@ -1,0 +1,7 @@
+{
+  "name": "hangarx",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

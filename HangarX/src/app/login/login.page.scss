@@ -1,0 +1,59 @@
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 2rem;
+  background: linear-gradient(to bottom, #0a192f, #1f2937);
+}
+
+.logo-image {
+  width: 260px;
+  margin-bottom: 2.5rem;
+  animation: float 4s ease-in-out infinite;
+  filter: drop-shadow(0 0 18px rgba(0, 168, 255, 0.75));
+  transition: transform 0.3s ease-in-out;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 380px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  background-color: #ffffff;
+}
+
+ion-card-title, ion-card-subtitle {
+  color: #1f2937;
+}
+
+ion-item {
+  --highlight-color-focused: #0078D4;
+  --border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.login-button {
+  --background: #0078D4;
+  --border-radius: 12px;
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+.register-button {
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+  text-align: center;
+}
+@keyframes float {
+  0% {
+    transform: translateY(0px) rotate(0deg) scale(1);
+  }
+  50% {
+    transform: translateY(-10px) rotate(-1deg) scale(1.02);
+  }
+  100% {
+    transform: translateY(0px) rotate(0deg) scale(1);
+  }
+}

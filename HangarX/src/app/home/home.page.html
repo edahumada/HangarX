@@ -1,0 +1,29 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-menu-button menu="mainMenu"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <ion-card class="custom-card">
+    <ion-card-header>
+      <ion-card-title>Bienvenido {{ email }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Selecciona una de las aeronaves para ver más detalles.</p>
+    </ion-card-content>
+  </ion-card>
+
+  <div *ngFor="let avion of aviones" (click)="toggleExpand(avion)">
+    <ion-card class="custom-card">
+      <ion-card-header>
+        <ion-card-title>{{ avion.nombre }} - {{ avion.modelo }}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content *ngIf="avion.expandida">
+        <p>{{ avion.descripcion }}</p>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
